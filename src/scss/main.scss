@@ -1,0 +1,28 @@
+@import "reset";
+@import "fonts";
+@import "colors";
+@import "grid";
+@import "base";
+
+//###Templates###/
+@import "./templates/TMP-navigation";
+@import "./templates/TMP-home-section-1";
+@import "./templates/TMP-home-section-2";
+@import "./templates/TMP-home-section-3";
+@import "./templates/TMP-home-section-4";
+@import "./templates/TMP-contactus";
+@import "./templates/TMP-footer";
+
+
+//###Widgets###/
+@import "./widgets/WDG-home-slider";
+@import "./widgets/WDG-home-product-categories";
+
+
+//###Components###/
+@import "./components/CMP-weblogo";
+@import "./components/CMP-webnavigation";
+@import "./components/CMP-websearch";
+@import "./components/CMP-button";
+@import "./components/CMP-text";
+@import "./components/CMP-image";

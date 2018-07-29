@@ -1,0 +1,53 @@
+[data-component="text"] {
+    font-size: 16px;
+    color: $color_text;
+
+    h1, h2 {
+        font-weight: 900;
+    }
+
+    h1 {
+
+    }
+
+    h2 {
+        text-transform: uppercase;
+        font-size: 3em;
+        margin-bottom: 1.688rem;
+        line-height: 1.1;
+    }
+
+    h4 {
+        text-transform: uppercase;
+        font-size: 1.5em;
+        margin-bottom: 1.688rem;
+        line-height: 1.1;
+    }
+
+    p {
+        font-size: 1.25em;
+        font-weight: 300;
+        line-height: 1.5;
+        margin-bottom: 2.75rem;
+    }
+
+    .featured-title {
+        display: flex;
+        align-items: center;
+        font-size: 1.5em;
+        text-transform: capitalize;
+        color: $color_text;
+        font-weight: 700;
+
+        span {
+            margin: 0 1.25rem;
+        }
+
+        &:before, &:after {
+            content: "";
+            height: 1px;
+            background-color: $color_text;
+            flex: 1;
+        }
+    }
+}

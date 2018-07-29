@@ -1,0 +1,48 @@
+[data-component="websearch"] {
+    background-color: $color_grey;
+    display: flex;
+    align-items: center;
+    padding: .75rem 1rem;
+    max-width: 230px;
+    width: 100%;
+
+
+    &:before {
+        content: "";
+        min-width: 30px; min-height: 30px;
+        background-image: url('../img/search.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-right: 1rem;
+    }
+
+    input {
+        border: none;
+        outline: none;
+        background: none;
+        font-family: 'Montserrat', sans-serif;
+        font-size: .875em;
+
+        &::-webkit-input-placeholder {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1em;
+        }
+
+        &::-moz-placeholder {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1em;
+        }
+
+        &:-ms-input-placeholder {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1em;
+        }
+
+        &:-moz-placeholder {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1em;
+        }
+    }
+
+}

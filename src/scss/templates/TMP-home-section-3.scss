@@ -1,0 +1,10 @@
+[data-template="home-section-3"] {
+    padding: 7.188rem 2rem;
+    text-align: center;
+    background-image: url("../img/home-section-3.png");
+    background-size: cover;
+
+    [data-component="text"] {
+        color: $color_white;
+    }
+}

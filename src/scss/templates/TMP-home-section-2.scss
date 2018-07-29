@@ -1,0 +1,14 @@
+[data-template="home-section-2"] {
+    padding: 5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    [data-component="text"] {
+        text-align: center;
+    }
+
+    [data-component="button"] {
+        display: block;
+        text-align: center;
+    }
+}

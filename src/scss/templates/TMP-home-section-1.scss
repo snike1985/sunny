@@ -1,0 +1,68 @@
+[data-template="home-section-1"] {
+
+    position: relative;
+    overflow: hidden;
+    padding:  6.375rem 2rem 0 3rem;
+
+    &:after {
+        content: "";
+        display: block;
+        background-color: #ffc600;
+        position: absolute;
+        right: -11%;
+        top: 0;
+        width: 60%;
+        height: 200%;
+        transform: skewx(-7deg);
+        z-index: -1;
+    }
+
+    .row {
+        padding: 0 1rem 9.688rem 7rem;
+
+        display: flex;
+
+        > * {
+            flex: 1;
+        }
+
+        @supports (display: grid) {
+            display: grid;
+            grid-template-columns: 34% 335px 1fr;
+            grid-column-gap: 5.5rem;
+        }
+
+        
+
+        .item {
+            &:nth-of-type(3) {
+                display: flex;
+                align-items: flex-end;
+                justify-content: flex-end;
+
+                [data-component="image"] {
+                    max-width: 162px;
+                }
+            }
+        }
+    }
+
+    .brands {
+        display: flex;
+        align-items: center;
+        margin: 50px -35px;
+
+
+
+        > * {
+            margin: 0 35px;
+
+            [data-component="image"] {
+                img {
+                    // max-width: none;
+                    // width: auto;
+                }
+            }
+        }
+    }
+}

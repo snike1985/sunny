@@ -1,0 +1,43 @@
+[data-template="home-section-4"] {
+    padding: 15rem 3rem;
+    text-align: center;
+    background-image: url("../img/home-section-4.png");
+    background-size: cover;
+    font-size: 16px;
+
+    .list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 5rem auto -2rem;
+        padding-left: 10rem;
+
+        > * {
+            width: 30%;
+
+            padding: 0 1rem 2rem 1rem;
+
+            span {
+                font-family: 'Poppins', sans-serif;
+                flex-basis: auto;
+                display: flex;
+                align-items: center;
+                font-size: 1.5em;
+                color: $color_text;
+                font-weight: 700;
+
+                &:before {
+                    content: "";
+                    display: block;
+                    width: 60px; height: 60px;
+                    background-image: url("../img/icon-location.png");
+                    background-size: cover;
+                    margin-right: 2.5rem;
+                }
+            }
+
+
+
+
+        }
+    }
+}
