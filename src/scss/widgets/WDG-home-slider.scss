@@ -16,6 +16,15 @@
         border-radius: 30%;
         box-shadow: 0 30px 60px -5px rgba(0, 0, 0, 0.25);
         z-index: -1;
+
+        @media(max-width: $mobile) {
+            box-shadow: none;
+
+        }
+    }
+
+    @media(max-width: $mobile) {
+        margin: 5rem 0 3rem;
     }
 
     &.popular-products  {
@@ -29,37 +38,110 @@
                 position: absolute;
                 top: 50%;
                 left: -13%;
-                width: 120%;
+                width: 126%;
                 height: 0;
+
+                @media(max-width: $portrait_large) {
+                    left: -25px;
+                    width: 107%;
+                }
+
+                @media(max-width: $mobile) {
+                    left: 0; right: 0;
+                    width: 95%;
+                    margin: 0 auto;
+                }
+            }
+
+            &-slide {
+
+                &:nth-of-type(even) {
+
+                    .products {
+
+                        &-container {
+
+                            > * {
+
+                                &:nth-of-type(1) {
+                                    background-color: $color_yellow;
+
+                                    [data-component="text"] {
+                                        color: $color_text
+                                    }
+                                }
+
+                                &:nth-of-type(2) {
+                                    background-color: $color_text;
+
+                                    [data-component="text"] {
+                                        color: $color_white;
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &:nth-of-type(odd) {
+                    .products {
+
+                        &-container {
+
+                            > * {
+                                &:nth-of-type(1) {
+                                    background-color: $color_text;
+
+                                    [data-component="text"] {
+                                        color: $color_white;
+
+                                    }
+                                }
+
+                                &:nth-of-type(2) {
+                                    background-color: $color_yellow;
+
+                                    [data-component="text"] {
+                                        color: $color_text
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
 
             &-button {
+
                 &-prev {
                     background-image: url('../img/svg/btn_line_circle-black.svg');
                     top: 50%; left: -100px;
-                    transform-origin: center left;
-                    border: 2px solid $color_text;
-
                 }
+
                 &-next {
                     background-image: url('../img/svg/btn_line_circle-black.svg');
                     top: 50%; right: -50px;
                     transform: rotate(180deg);
-                    transform-origin: center right;
+                }
+
+                &-prev, &-next {
                     border: 2px solid $color_text;
 
+
+                    @media(max-width: $portrait_large) {
+                        border: none;
+                        left: 0;
+                        right: 0;
+                    }
                 }
             }
         }
-
     }
 
     &.product-categories {
+
         .swiper {
-
-            &-navigation {
-
-            }
 
             &-navigation {
                 display: flex;
@@ -70,20 +152,19 @@
 
             &-button {
 
+                &-prev, &-next {
+                    display: block;
+                    border: 2px solid $color_white;
+                }
+
                 &-prev {
                     background-image: url('../img/svg/btn_line_circle-white.svg');
-                    top: 50%; left: -100px;
-                    transform-origin: center left;
-                    border: 2px solid $color_white;
-
+                    margin-right: 3rem;
                 }
+
                 &-next {
                     background-image: url('../img/svg/btn_line_circle-white.svg');
-                    top: 50%; right: -50px;
                     transform: rotate(180deg);
-                    transform-origin: center right;
-                    border: 2px solid $color_white;
-
                 }
             }
         }
@@ -108,6 +189,7 @@
 
     [class*="swiper-button-"] {
         width: 60px; height: 60px;
+        min-width: 60px; min-height: 60px;
         cursor: pointer;
         display: flex; align-items: center; justify-content: center;
         border-radius: 50%;
@@ -120,6 +202,10 @@
 
         &:hover:not(.swiper-button-disabled) {
             opacity: .65;
+
+            @media(max-width: $laptop_small) {
+                opacity: 1;
+            }
         }
     }
 
@@ -127,14 +213,12 @@
 
         &-disabled {
             opacity: .2;
-            // width: 0;
         }
     }
 
     .products {
+
         &-container {
-            display: flex;
-            flex-wrap: wrap;
             text-align: center;
 
             font-size: 16px;
@@ -144,6 +228,10 @@
                 font-weight: 900;
                 text-transform: uppercase;
                 line-height: 1.1;
+
+                @media(max-width: $mobile) {
+                    font-size: 1em;
+                }
             }
 
 
@@ -153,31 +241,32 @@
                 img {
                     max-width: none;
                     width: auto;
+
+                    @media(max-width: $mobile) {
+                        max-width: 100%;
+                    }
                 }
             }
 
             > * {
-                width: 50%;
-                flex-basis: auto;
-                min-width: 1px;
                 padding: 40px;
 
-                &:nth-of-type(1), &:nth-of-type(4) {
-                    background-color: $color_text;
-
-                    [data-component="text"] {
-                        color: $color_white;
-
-                    }
-                }
-
-                &:nth-of-type(2), &:nth-of-type(3) {
-                    background-color: $color_yellow;
-
-                    [data-component="text"] {
-                        color: $color_text
-                    }
-                }
+                // &:nth-of-type(1), &:nth-of-type(4) {
+                //     background-color: $color_text;
+                //
+                //     [data-component="text"] {
+                //         color: $color_white;
+                //
+                //     }
+                // }
+                //
+                // &:nth-of-type(2), &:nth-of-type(3) {
+                //     background-color: $color_yellow;
+                //
+                //     [data-component="text"] {
+                //         color: $color_text
+                //     }
+                // }
 
             }
         }

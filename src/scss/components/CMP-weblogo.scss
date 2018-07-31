@@ -14,4 +14,9 @@
 
         }
     }
+
+    @media(max-width: $laptop_small) {
+        width: 130px;
+        margin: -1rem 0 0 0;
+    }
 }

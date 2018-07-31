@@ -15,11 +15,25 @@
         height: 200%;
         transform: skewx(-7deg);
         z-index: -1;
+
+        @media(max-width: $laptop_small) {
+            right: -6%;
+        }
     }
+
+    @media(max-width: $portrait_large) {
+
+        &:after {
+            display: none;
+        }
+    }
+    @media(max-width: $mobile) {
+        padding: 6.375rem 2rem 7rem 2rem;
+    }
+
 
     .row {
         padding: 0 1rem 9.688rem 7rem;
-
         display: flex;
 
         > * {
@@ -32,7 +46,45 @@
             grid-column-gap: 5.5rem;
         }
 
-        
+        @media(max-width: $laptop_small) {
+            padding: 2rem;
+            grid-template-columns: repeat(2, 1fr);
+
+            text-align: center;
+
+            [data-component="text"] {
+                width: 80%;
+                margin: 0 auto 5rem;
+
+                br {
+                    display: none;
+                }
+            }
+        }
+
+        @media(max-width: $portrait_large) {
+            padding: 3rem;
+            display: block;
+            text-align: center;
+
+            [data-component="text"] {
+                width: 80%;
+                margin: 0 auto 5rem;
+
+                br {
+                    display: none;
+                }
+            }
+        }
+
+        @media(max-width: $mobile) {
+            padding: 0;
+
+            [data-component="text"] {
+                width: 100%;
+                margin: 0 auto 5rem;
+            }
+        }
 
         .item {
             &:nth-of-type(3) {
@@ -44,6 +96,24 @@
                     max-width: 162px;
                 }
             }
+
+            @media(max-width: $laptop_small) {
+
+                &:nth-of-type(3) {
+                    display: none;
+                }
+
+                [data-component="image"] {
+                    max-width: 300px;
+                }
+            }
+
+            @media(max-width: $portrait_large) {
+
+                &:nth-of-type(2), &:nth-of-type(3) {
+                    display: none;
+                }
+            }
         }
     }
 
@@ -52,17 +122,30 @@
         align-items: center;
         margin: 50px -35px;
 
+        @media (max-width: $portrait_large) {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-row-gap: 2rem;
+            margin: 3rem 0 10rem;
 
+            > * {
+                margin: 0;
+            }
+        }
+
+        @media (max-width: $mobile) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-row-gap: 2rem;
+            margin: 0;
+
+            > * {
+                margin: 0;
+            }
+        }
 
         > * {
             margin: 0 35px;
-
-            [data-component="image"] {
-                img {
-                    // max-width: none;
-                    // width: auto;
-                }
-            }
         }
     }
 }

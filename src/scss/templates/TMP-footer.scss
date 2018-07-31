@@ -3,12 +3,25 @@ footer {
     padding: 20px 100px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     font-size: 16px;
 
+    @media(max-width: $portrait_large) {
+        padding: 30px 50px;
+    }
+
+    @media(max-width: $mobile) {
+        display: block;
+        text-align: center;
+    }
+
     .item {
-        display: flex;
+        display: inline-flex;
         align-items: center;
 
+        @media(max-width: $portrait_large) {
+            display: block;
+        }
 
         [data-component="text"] {
             color: $color_white;
@@ -25,6 +38,17 @@ footer {
         &-logo {
             display: flex;
 
+            @media(max-width: $portrait_large) {
+                margin-bottom: 2rem;
+            }
+
+            @media(max-width: $mobile) {
+                width: 125px;
+                margin: 0 auto 1.5rem;
+                display: block;
+                text-align: center;
+            }
+
 
             &:after {
                 content: "";
@@ -32,6 +56,10 @@ footer {
                 width: 2px;
                 background-color: $color_white;
                 margin: 0 2.5rem;
+
+                @media(max-width: $portrait_large) {
+                    display: none;
+                }
             }
         }
 
@@ -40,6 +68,8 @@ footer {
             align-items: center;
             margin: 0 -1rem;
 
+
+
             > * {
                 margin: 0 1rem;
                 transition: .3s;
@@ -47,6 +77,11 @@ footer {
                 &:hover {
                     opacity: .75;
                 }
+            }
+
+            @media(max-width: $mobile) {
+                margin: 2rem 0;
+                justify-content: center;
             }
         }
     }

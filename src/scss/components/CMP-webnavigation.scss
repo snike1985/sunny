@@ -1,7 +1,18 @@
 [data-component="webnavigation"] {
     display: flex;
     align-items: center;
-    //flex: 1;
+
+    @media(max-width: $laptop_small) {
+        display: block;
+        border-top: 2px solid #f2f2f2;
+        padding-top: 2rem;
+        margin: 2rem 0 4rem;
+
+        > * {
+            display: block;
+            margin-bottom: 2rem;
+        }
+    }
 
     a {
         font-size: 0.875em;

@@ -10,6 +10,13 @@ html {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
+
+    @media(max-width: $laptop_small) {
+        font-size: 80%
+    }
+    @media(max-width: $portrait_large) {
+        font-size: 73%
+    }
 }
 
 body {
@@ -17,4 +24,9 @@ body {
     background-color: $color_white;
     max-width: 1440px;
     margin: 0 auto;
+    position: relative;
+
+    @media(max-width: $laptop_small) {
+        padding-top: 5rem;
+    }
 }
