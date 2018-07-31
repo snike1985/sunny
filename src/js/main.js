@@ -1,141 +1,6 @@
 //= arrayfrompolyfill.js
 'use strict;'
 
-const product_categories = [
-    [
-        {
-            img: './img/prod-2.png',
-            link: '#close',
-        },
-        {
-           img: './img/prod-3.png',
-           link: '#close'
-       },
-       {
-           img: './img/prod-4.png',
-           link: '#close'
-       },
-       {
-            img: './img/prod-5.png',
-            link: '#close'
-        },
-        {
-            img: './img/prod-2.png',
-            link: '#close'
-         },
-    ],
-    [
-        {
-            img: 'http://via.placeholder.com/196x300',
-            link: '#close',
-        },
-        {
-            img: 'http://via.placeholder.com/196x300',
-            link: '#close'
-       },
-       {
-           img: 'http://via.placeholder.com/196x300',
-           link: '#close'
-       },
-       {
-           img: 'http://via.placeholder.com/196x300',
-           link: '#close'
-        },
-        {
-            img: 'http://via.placeholder.com/196x300',
-            link: '#close'
-         },
-    ],
-    [
-        {
-            img: './img/prod-2.png',
-            link: '#close',
-        },
-        {
-           img: './img/prod-3.png',
-           link: '#close'
-       },
-       {
-           img: './img/prod-4.png',
-           link: '#close'
-       },
-       {
-            img: './img/prod-5.png',
-            link: '#close'
-        },
-        {
-            img: './img/prod-2.png',
-            link: '#close'
-         },
-    ],
-    [
-        {
-            img: './img/prod-2.png',
-            link: '#close',
-        },
-        {
-           img: './img/prod-3.png',
-           link: '#close'
-       },
-       {
-           img: './img/prod-4.png',
-           link: '#close'
-       },
-       {
-            img: './img/prod-5.png',
-            link: '#close'
-        },
-        {
-            img: './img/prod-2.png',
-            link: '#close'
-         },
-    ],
-    [
-        {
-            img: './img/prod-2.png',
-            link: '#close',
-        },
-        {
-           img: './img/prod-3.png',
-           link: '#close'
-       },
-       {
-           img: './img/prod-4.png',
-           link: '#close'
-       },
-       {
-            img: './img/prod-5.png',
-            link: '#close'
-        },
-        {
-            img: './img/prod-2.png',
-            link: '#close'
-         },
-    ],
-    [
-        {
-            img: './img/prod-2.png',
-            link: '#close',
-        },
-        {
-           img: './img/prod-3.png',
-           link: '#close'
-       },
-       {
-           img: './img/prod-4.png',
-           link: '#close'
-       },
-       {
-            img: './img/prod-5.png',
-            link: '#close'
-        },
-        {
-            img: './img/prod-2.png',
-            link: '#close'
-         },
-    ],
-]
-
 const base = {
 
     _createElement(tag, props, ...children)  {
@@ -161,6 +26,13 @@ const base = {
             draggable: false,
 			watchOverflow: true,
 			loop: true,
+            slidesPerView: 2,
+            spaceBetween: 0,
+            breakpoints: {
+                480: {
+                    slidesPerView: 1,
+                }
+            },
             navigation: {
                 nextEl: '[data-widget="home-slider"] .swiper-button-next',
                 prevEl: '[data-widget="home-slider"] .swiper-button-prev',
@@ -169,7 +41,6 @@ const base = {
     },
 
     _homeSliderPopularCategories(){
-        //let firstSliderInit = true;
 
         const parentOfSlider = document.querySelector('#prod_cat_slider');
 
@@ -243,7 +114,17 @@ const base = {
         })
     },
 
+    _navButtonHandler(){
+        const nav = document.querySelector('.navmobile');
+        const navBlock = document.querySelector('[data-template="navigation"]');
+
+        nav.addEventListener('click', () => {
+            navBlock.classList.toggle('open');
+        })
+    },
+
     init() {
+        this._navButtonHandler();
         this._homeSliderPopularProducts();
         this._homeSliderPopularCategories();
     }

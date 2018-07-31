@@ -19,6 +19,7 @@
         border: none;
         cursor: pointer;
         transition: .3s;
+        -webkit-appearance: none;
 
         &:hover {
             background-color: #eab706;

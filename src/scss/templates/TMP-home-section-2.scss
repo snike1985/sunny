@@ -3,6 +3,10 @@
     max-width: 1000px;
     margin: 0 auto;
 
+    @media(max-width: $mobile) {
+        padding: 0;
+    }
+
     [data-component="text"] {
         text-align: center;
     }

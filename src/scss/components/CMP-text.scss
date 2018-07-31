@@ -15,6 +15,13 @@
         font-size: 3em;
         margin-bottom: 1.688rem;
         line-height: 1.1;
+
+        @media(max-width: $portrait_large) {
+            font-size: 2em
+        }
+        @media(max-width: $mobile) {
+            font-size: 1.5em
+        }
     }
 
     h4 {
@@ -29,6 +36,15 @@
         font-weight: 300;
         line-height: 1.5;
         margin-bottom: 2.75rem;
+
+        @media(max-width: $portrait_large) {
+            font-size: 1.25em
+        }
+        @media(max-width: $mobile) {
+            font-size: 1em;
+        }
+
+
     }
 
     .featured-title {
@@ -38,9 +54,21 @@
         text-transform: capitalize;
         color: $color_text;
         font-weight: 700;
+        text-align: center;
 
         span {
             margin: 0 1.25rem;
+        }
+
+        @media(max-width: $mobile) {
+            display: block;
+
+            margin-top: 55px;
+            margin-bottom: 40px;
+
+            &:after {
+                display: none;
+            }
         }
 
         &:before, &:after {
@@ -48,6 +76,10 @@
             height: 1px;
             background-color: $color_text;
             flex: 1;
+
+            @media(max-width: $mobile) {
+                display: none;
+            }
         }
     }
 
