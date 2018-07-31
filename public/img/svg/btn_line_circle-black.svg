@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs></defs>
+    <g id="Design---Mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1-1-2-Sunnyside-Mobile" transform="translate(-17.000000, -1607.000000)">
+            <g id="Popular-Products" transform="translate(0.000000, 1333.000000)">
+                <g id="btn_line_circle" transform="translate(47.000000, 304.000000) scale(-1, 1) translate(-47.000000, -304.000000) translate(17.000000, 274.000000)">
+                    <rect id="bg_btn" fill="#FFFFFF" x="0" y="0" width="60" height="60" rx="30"></rect>
+                    <path d="M22,35 L34,35 L34,37 L22,37 L20,37 L20,23 L22,23 L22,35 Z" id="Rectangle-37" fill="#312D3B" transform="translate(27.000000, 30.000000) rotate(-135.000000) translate(-27.000000, -30.000000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

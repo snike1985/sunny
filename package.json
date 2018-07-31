@@ -1,13 +1,13 @@
 {
-  "name": "bcr-frontend",
+  "name": "sunny-frontend",
   "version": "1.0.0",
   "description": "Frontend stuff for BCR",
   "main": "index.js",
   "repository": {
-    "url": "https://github.com/snike1985/brc",
+    "url": "https://github.com/snike1985/sunny",
     "type": "git"
   },
-  "author": "Roman Kovalev <theneedhate84@gmail.com>",
+  "author": "Alex Serga",
   "license": "MIT",
   "babel": {
     "presets": [
