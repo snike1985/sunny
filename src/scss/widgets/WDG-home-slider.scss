@@ -16,6 +16,15 @@
         border-radius: 30%;
         box-shadow: 0 30px 60px -5px rgba(0, 0, 0, 0.25);
         z-index: -1;
+
+        @media(max-width: $mobile) {
+            box-shadow: none;
+
+        }
+    }
+
+    @media(max-width: $mobile) {
+        margin: 5rem 0 3rem;
     }
 
     &.popular-products  {
@@ -32,9 +41,15 @@
                 width: 126%;
                 height: 0;
 
+                @media(max-width: $portrait_large) {
+                    left: -25px;
+                    width: 107%;
+                }
+
                 @media(max-width: $mobile) {
-                    left: 0;
-                    width: 100%;
+                    left: 0; right: 0;
+                    width: 95%;
+                    margin: 0 auto;
                 }
             }
 
@@ -83,7 +98,7 @@
 
                                     }
                                 }
-                                
+
                                 &:nth-of-type(2) {
                                     background-color: $color_yellow;
 
@@ -114,7 +129,7 @@
                     border: 2px solid $color_text;
 
 
-                    @media(max-width: $mobile) {
+                    @media(max-width: $portrait_large) {
                         border: none;
                         left: 0;
                         right: 0;
@@ -187,6 +202,10 @@
 
         &:hover:not(.swiper-button-disabled) {
             opacity: .65;
+
+            @media(max-width: $laptop_small) {
+                opacity: 1;
+            }
         }
     }
 

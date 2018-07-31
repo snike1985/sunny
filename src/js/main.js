@@ -78,9 +78,16 @@ const base = {
             runCallbacksOnInit: true,
             draggable: true,
             initialSlide: 0,
-            loop: false,
+            loop: true,
             slidesPerView: 4,
             spaceBetween: 30,
+            breakpoints: {
+                480: {
+                    slidesPerView: 2,
+                    spaceBetween: 15,
+                },
+
+            },
             navigation: {
                 nextEl: '[data-widget="home-slider"] .swiper-button-next',
                 prevEl: '[data-widget="home-slider"] .swiper-button-prev',

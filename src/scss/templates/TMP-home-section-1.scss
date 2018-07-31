@@ -27,6 +27,10 @@
             display: none;
         }
     }
+    @media(max-width: $mobile) {
+        padding: 6.375rem 2rem 7rem 2rem;
+    }
+
 
     .row {
         padding: 0 1rem 9.688rem 7rem;
@@ -74,7 +78,7 @@
         }
 
         @media(max-width: $mobile) {
-            padding: 2rem;
+            padding: 0;
 
             [data-component="text"] {
                 width: 100%;
@@ -118,11 +122,21 @@
         align-items: center;
         margin: 50px -35px;
 
+        @media (max-width: $portrait_large) {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-row-gap: 2rem;
+            margin: 3rem 0 10rem;
+
+            > * {
+                margin: 0;
+            }
+        }
+
         @media (max-width: $mobile) {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-row-gap: 2rem;
-            grid-column-gap: 2rem;
             margin: 0;
 
             > * {
@@ -130,17 +144,8 @@
             }
         }
 
-
-
         > * {
             margin: 0 35px;
-
-            [data-component="image"] {
-                img {
-                    // max-width: none;
-                    // width: auto;
-                }
-            }
         }
     }
 }

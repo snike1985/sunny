@@ -9,6 +9,13 @@
         color: $color_white;
     }
 
+    @media(max-width: $laptop_small) {
+        padding: 10rem 3rem;
+    }
+    @media(max-width: $laptop_small) {
+        padding: 40px 20px 60px;
+    }
+
     form {
 
         max-width: 620px;
@@ -18,6 +25,11 @@
             &-area {
                 display: flex;
                 margin: 0 -1rem;
+
+                @media(max-width: $mobile) {
+                    display: block;
+                    margin: 0;
+                }
             }
 
             &-text {
@@ -29,9 +41,24 @@
                 overflow: hidden;
                 padding: 20px;
 
+                @media(max-width: $mobile) {
+                    width: 100%;
+                    margin: 0;
+                    margin-bottom:2rem;
+
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+                }
+
                 input {
                     max-width: 100%;
                     width: 100%;
+
+                    @media(max-width: $mobile) {
+                        width: 100%;
+
+                    }
                 }
             }
         }

@@ -5,16 +5,41 @@
     background-size: cover;
     font-size: 16px;
 
+    @media(max-width: $laptop_small) {
+        padding: 10rem 3rem;
+    }
+
+    @media(max-width: $mobile) {
+        padding: 80px 40px;;
+        max-height: 100vh;
+        overflow-y: auto;
+    }
+
     .list {
         display: flex;
         flex-wrap: wrap;
         margin: 5rem auto -2rem;
         padding-left: 10rem;
 
+        @media(max-width: $laptop_small) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 3rem;
+            grid-row-gap: 3rem;
+            padding: 0
+        }
+
+        @media(max-width: $mobile) {
+            display: block;
+        }
+
         > * {
             width: 30%;
-
             padding: 0 1rem 2rem 1rem;
+
+            @media(max-width: $laptop_small) {
+                width: 100%;
+            }
 
             span {
                 font-family: 'Poppins', sans-serif;
@@ -28,16 +53,21 @@
                 &:before {
                     content: "";
                     display: block;
+                    //min-width: 60px; min-height: 60px;
                     width: 60px; height: 60px;
                     background-image: url("../img/icon-location.png");
                     background-size: cover;
                     margin-right: 2.5rem;
                 }
+
+                @media(max-width: $mobile) {
+                    font-size: 1em;
+
+                    &:before {
+                        width: 30px; height: 30px;
+                    }
+                }
             }
-
-
-
-
         }
     }
 }

@@ -4,6 +4,10 @@
     background-image: url("../img/home-section-3.png");
     background-size: cover;
 
+    @media(max-width: $mobile) {
+        padding: 3rem 1rem;
+    }
+
     [data-component="text"] {
         color: $color_white;
     }
