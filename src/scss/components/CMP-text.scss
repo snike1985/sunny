@@ -34,14 +34,16 @@
     p {
         font-size: 1.25em;
         font-weight: 300;
-        line-height: 1.5;
+        line-height: 1.75;
         margin-bottom: 2.75rem;
 
         @media(max-width: $portrait_large) {
-            font-size: 1.25em
+            font-size: 1.5em;
+            line-height: 1.75;
         }
         @media(max-width: $mobile) {
             font-size: 1em;
+            line-height: 2;
         }
 
 
